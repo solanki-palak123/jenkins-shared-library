@@ -1,3 +1,3 @@
-def call() {
-    sh 'docker build --no-cache -t jenkins-node:v8 .'
+def call(String imageName, String tag) {
+    sh "docker build --no-cache -t ${imageName}:${tag} ."
 }
